@@ -6,7 +6,7 @@ function ProductsShowcase() {
   return (
     <section className="products-showcase">
       <div className="products-showcase__header">
-        <h2 className="products-showcase__title">Shop</h2>
+        <h2 className="products-showcase__title">SHOP</h2>
       </div>
 
       <DraggableCarousel

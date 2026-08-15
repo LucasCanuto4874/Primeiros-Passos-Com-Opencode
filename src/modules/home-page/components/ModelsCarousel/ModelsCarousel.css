@@ -1,10 +1,11 @@
 .models-carousel {
   padding: 5rem 0;
+  scroll-snap-align: start;
 }
 
 .models-carousel__header {
   padding: 0 4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .models-carousel__title {
@@ -58,7 +59,7 @@
 
 .models-carousel__glasses-name {
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: 700;
   color: #000;
   margin: 0;
 }
