@@ -1,7 +1,7 @@
-import VitrineView from './modules/vitrine/view/VitrineView';
+import HomePageView from './modules/home-page/view/HomePageView';
 
 function App() {
-  return <VitrineView />;
+  return <HomePageView />;
 }
 
 export default App;
