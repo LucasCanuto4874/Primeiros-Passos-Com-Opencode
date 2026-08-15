@@ -81,13 +81,14 @@
 }
 
 .hero-section__btn--primary {
-  background-color: #fff;
-  color: #000;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .hero-section__btn--primary:hover {
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
 }
 
 .hero-section__btn--secondary {

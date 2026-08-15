@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { FiSearch, FiUser, FiShoppingBag } from 'react-icons/fi';
 import './Header.css';
 
@@ -11,8 +12,21 @@ const navLinks = [
 ];
 
 function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const heroHeight = window.innerHeight;
+      setIsScrolled(scrollPosition > heroHeight * 0.8);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <nav className="header__nav">
         {navLinks.map((link) => (
           <a key={link} href={`#${link.toLowerCase().replace(/\s/g, '-')}`} className="header__link">
