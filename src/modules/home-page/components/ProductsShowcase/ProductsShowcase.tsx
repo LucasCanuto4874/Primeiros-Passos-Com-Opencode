@@ -1,11 +1,12 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
+import { InertiaPlugin } from 'gsap/InertiaPlugin';
 import { FiShoppingBag } from 'react-icons/fi';
 import { productsData } from '../../mocks/productsData';
 import './ProductsShowcase.css';
 
-gsap.registerPlugin(Draggable);
+gsap.registerPlugin(Draggable, InertiaPlugin);
 
 function ProductsShowcase() {
   const containerRef = useRef<HTMLDivElement>(null);

@@ -1,6 +1,5 @@
 .models-carousel {
   padding: 5rem 0;
-  background-color: #f5f5f5;
 }
 
 .models-carousel__header {
@@ -32,38 +31,36 @@
 }
 
 .models-carousel__card {
-  flex: 0 0 350px;
+  flex: 0 0 550px;
+  position: relative;
   user-select: none;
 }
 
 .models-carousel__image-wrapper {
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .models-carousel__image {
   width: 100%;
-  height: 450px;
+  height: 700px;
   object-fit: cover;
-  transition: transform 0.5s ease;
   pointer-events: none;
 }
 
-.models-carousel__card:hover .models-carousel__image {
-  transform: scale(1.05);
-}
-
 .models-carousel__info {
-  text-align: center;
+  padding: 1rem 0;
+  text-align: left;
 }
 
 .models-carousel__glasses-name {
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  color: #000;
+  margin: 0;
 }
 
 .models-carousel__price {
-  font-size: 1rem;
-  color: #666;
+  font-size: 0.75rem;
+  color: #000;
+  margin: 0.25rem 0 0 0;
 }

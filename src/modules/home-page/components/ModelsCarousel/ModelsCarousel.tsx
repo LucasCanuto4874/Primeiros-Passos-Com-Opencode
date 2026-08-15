@@ -1,10 +1,11 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { Draggable } from 'gsap/Draggable';
+import { InertiaPlugin } from 'gsap/InertiaPlugin';
 import { modelsData } from '../../mocks/modelsData';
 import './ModelsCarousel.css';
 
-gsap.registerPlugin(Draggable);
+gsap.registerPlugin(Draggable, InertiaPlugin);
 
 function ModelsCarousel() {
   const containerRef = useRef<HTMLDivElement>(null);

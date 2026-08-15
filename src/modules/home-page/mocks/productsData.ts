@@ -2,7 +2,7 @@ import { ProductCard } from '../types';
 
 import product1 from '../img/img-products-carrousel/11004753_FRONT.avif';
 import product2 from '../img/img-products-carrousel/11004955_FRONT.avif';
-import product3 from '../img/img-products-carrousel/11004974_FRONT.avif';
+import product3 from '../img/img-products-carrousel/11004981_FRONT.avif';
 import product4 from '../img/img-products-carrousel/11005026_FRONT.avif';
 import product5 from '../img/img-products-carrousel/11005068_FRONT.avif';
 import product6 from '../img/img-products-carrousel/11005095_FRONT.avif';
