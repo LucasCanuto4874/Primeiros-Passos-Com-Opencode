@@ -1,59 +1,79 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { Draggable } from 'gsap/Draggable';
 import { modelsData } from '../../mocks/modelsData';
 import './ModelsCarousel.css';
 
-function ModelsCarousel() {
-  const carouselRef = useRef<HTMLDivElement>(null);
+gsap.registerPlugin(Draggable);
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (!carouselRef.current) return;
-    const scrollAmount = 400;
-    carouselRef.current.scrollBy({
-      left: direction === 'left' ? -scrollAmount : scrollAmount,
-      behavior: 'smooth',
-    });
-  };
+function ModelsCarousel() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const draggableInstance = useRef<InstanceType<typeof Draggable> | null>(null);
+
+  useEffect(() => {
+    if (!containerRef.current || !trackRef.current) return;
+
+    const updateBounds = () => {
+      if (draggableInstance.current) {
+        draggableInstance.current.kill();
+      }
+
+      const trackWidth = trackRef.current!.scrollWidth;
+      const containerWidth = containerRef.current!.offsetWidth;
+
+      const instances = Draggable.create(trackRef.current, {
+        type: 'x',
+        bounds: {
+          minX: -(trackWidth - containerWidth),
+          maxX: 0,
+        },
+        inertia: true,
+        cursor: 'grab',
+        activeCursor: 'grabbing',
+      });
+
+      draggableInstance.current = instances[0] as unknown as InstanceType<typeof Draggable>;
+    };
+
+    updateBounds();
+
+    window.addEventListener('resize', updateBounds);
+
+    return () => {
+      window.removeEventListener('resize', updateBounds);
+      if (draggableInstance.current) {
+        draggableInstance.current.kill();
+      }
+    };
+  }, []);
 
   return (
     <section className="models-carousel">
       <div className="models-carousel__header">
         <h2 className="models-carousel__title">Lookbook</h2>
-        <div className="models-carousel__nav">
-          <button
-            className="models-carousel__arrow"
-            onClick={() => scroll('left')}
-            aria-label="Anterior"
-          >
-            &#8249;
-          </button>
-          <button
-            className="models-carousel__arrow"
-            onClick={() => scroll('right')}
-            aria-label="Próximo"
-          >
-            &#8250;
-          </button>
-        </div>
       </div>
 
-      <div className="models-carousel__track" ref={carouselRef}>
-        {modelsData.map((model) => (
-          <div key={model.id} className="models-carousel__card">
-            <div className="models-carousel__image-wrapper">
-              <img
-                src={model.imageSrc}
-                alt={model.glassesName}
-                className="models-carousel__image"
-              />
+      <div className="models-carousel__container" ref={containerRef}>
+        <div className="models-carousel__track" ref={trackRef}>
+          {modelsData.map((model) => (
+            <div key={model.id} className="models-carousel__card">
+              <div className="models-carousel__image-wrapper">
+                <img
+                  src={model.imageSrc}
+                  alt={model.glassesName}
+                  className="models-carousel__image"
+                />
+              </div>
+              <div className="models-carousel__info">
+                <h3 className="models-carousel__glasses-name">{model.glassesName}</h3>
+                <p className="models-carousel__price">
+                  R$ {model.price.toFixed(2).replace('.', ',')}
+                </p>
+              </div>
             </div>
-            <div className="models-carousel__info">
-              <h3 className="models-carousel__glasses-name">{model.glassesName}</h3>
-              <p className="models-carousel__price">
-                R$ {model.price.toFixed(2).replace('.', ',')}
-              </p>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

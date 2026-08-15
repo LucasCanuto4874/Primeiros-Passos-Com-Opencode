@@ -4,9 +4,6 @@
 }
 
 .models-carousel__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 4rem;
   margin-bottom: 3rem;
 }
@@ -17,44 +14,26 @@
   letter-spacing: 0.05em;
 }
 
-.models-carousel__nav {
-  display: flex;
-  gap: 1rem;
-}
-
-.models-carousel__arrow {
-  font-size: 2rem;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #000;
-  transition: all 0.3s;
-}
-
-.models-carousel__arrow:hover {
-  background-color: #000;
-  color: #fff;
+.models-carousel__container {
+  width: 100%;
+  overflow: hidden;
 }
 
 .models-carousel__track {
   display: flex;
   gap: 2rem;
   padding: 0 4rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
+  width: fit-content;
+  cursor: grab;
 }
 
-.models-carousel__track::-webkit-scrollbar {
-  display: none;
+.models-carousel__track:active {
+  cursor: grabbing;
 }
 
 .models-carousel__card {
   flex: 0 0 350px;
-  scroll-snap-align: start;
-  cursor: pointer;
+  user-select: none;
 }
 
 .models-carousel__image-wrapper {
@@ -67,6 +46,7 @@
   height: 450px;
   object-fit: cover;
   transition: transform 0.5s ease;
+  pointer-events: none;
 }
 
 .models-carousel__card:hover .models-carousel__image {
