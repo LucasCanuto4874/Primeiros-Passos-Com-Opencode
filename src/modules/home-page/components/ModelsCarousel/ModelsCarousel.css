@@ -32,11 +32,11 @@
 
 .models-carousel__card {
   flex: 0 0 550px;
-  position: relative;
   user-select: none;
 }
 
 .models-carousel__image-wrapper {
+  position: relative;
   overflow: hidden;
 }
 
@@ -48,8 +48,12 @@
 }
 
 .models-carousel__info {
-  padding: 1rem 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
   text-align: left;
+  width: 100%;
 }
 
 .models-carousel__glasses-name {
