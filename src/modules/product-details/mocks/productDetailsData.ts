@@ -38,6 +38,7 @@ import d11005159_SIDE_DETAIL from '../img/products-details-img/11005159_SIDE_DET
 import d11005159_D_45 from '../img/products-details-img/11005159_D_45.avif';
 import d11005159_D_45_DETAIL from '../img/products-details-img/11005159_D_45_DETAIL.avif';
 import d11005159_NORMAL_1 from '../img/products-details-img/11005159_NORMAL_1.avif';
+import d11005159_VIDEO from '../img/products-details-img/11005159_AFTER_LOOK_BOOK_FIRST_1.mp4';
 
 const productCodeToDetails: Record<number, string[]> = {
   1: [d11005068_FRONT, d11005068_SIDE, d11005068_SIDE_DETAIL, d11005068_D_45, d11005068_D_45_DETAIL],
@@ -45,7 +46,7 @@ const productCodeToDetails: Record<number, string[]> = {
   3: [d11004768_FRONT, d11004768_SIDE, d11004768_SIDE_DETAIL, d11004768_D_45, d11004768_D_45_DETAIL],
   4: [d11004956_FRONT, d11004956_SIDE, d11004956_SIDE_DETAIL, d11004956_D_45, d11004956_D_45_DETAIL],
   5: [d11005065_FRONT, d11005065_SIDE, d11005065_SIDE_DETAIL, d11005065_D_45, d11005065_D_45_DETAIL],
-  6: [d11005159_FRONT, d11005159_SIDE, d11005159_SIDE_DETAIL, d11005159_D_45, d11005159_D_45_DETAIL, d11005159_NORMAL_1],
+  6: [d11005159_FRONT, d11005159_VIDEO, d11005159_SIDE, d11005159_SIDE_DETAIL, d11005159_D_45, d11005159_D_45_DETAIL, d11005159_NORMAL_1],
 };
 
 const modelDetails: ProductDetail[] = modelsData.map((model) => ({

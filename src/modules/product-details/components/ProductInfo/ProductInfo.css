@@ -1,13 +1,13 @@
 .product-info {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 32px 0;
+  gap: 16px;
+  padding: 0;
 }
 
 .product-info__name {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.2;
@@ -16,7 +16,7 @@
 
 .product-info__price {
   font-family: 'Manrope', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 300;
   color: #333;
   margin: 0;
@@ -24,8 +24,8 @@
 
 .product-info__description {
   font-family: 'Manrope', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.7;
+  font-size: 0.8rem;
+  line-height: 1.6;
   color: #555;
 }
 
@@ -35,43 +35,43 @@
 
 .product-info__specs {
   border-top: 1px solid #e0e0e0;
-  padding-top: 24px;
+  padding-top: 12px;
 }
 
 .product-info__specs-title {
   font-family: 'Manrope', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin: 0 0 16px 0;
+  margin: 0 0 10px 0;
   color: #000;
 }
 
 .product-info__specs-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0;
   margin: 0;
 }
 
 .product-info__spec-item {
   display: flex;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 5px 0;
   border-bottom: 1px solid #f0f0f0;
 }
 
 .product-info__spec-label {
   font-family: 'Manrope', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #666;
   margin: 0;
 }
 
 .product-info__spec-value {
   font-family: 'Manrope', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #000;
   margin: 0;
 }
@@ -79,19 +79,19 @@
 .product-info__actions {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding-top: 16px;
+  gap: 10px;
+  padding-top: 8px;
 }
 
 .product-info__quantity {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .product-info__quantity-label {
   font-family: 'Manrope', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -100,12 +100,12 @@
 
 .product-info__add-btn {
   width: 100%;
-  padding: 16px 32px;
+  padding: 14px 24px;
   background-color: #000;
   color: #fff;
   border: none;
   font-family: 'Manrope', sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
