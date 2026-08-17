@@ -1,0 +1,52 @@
+.order-summary {
+  padding: 24px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.order-summary__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.order-summary__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-summary__row--total {
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.order-summary__label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.order-summary__value {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  color: #000;
+}
+
+.order-summary__value--free {
+  color: #666;
+  font-style: italic;
+}
+
+.order-summary__value--total {
+  font-size: 1.125rem;
+  font-weight: 600;
+}

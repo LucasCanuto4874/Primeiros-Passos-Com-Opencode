@@ -55,7 +55,7 @@ function DraggableCarousel({
         draggableInstance.current.kill();
       }
     };
-  }, []);
+  }, [children]);
 
   return (
     <div className={className} ref={containerRef}>

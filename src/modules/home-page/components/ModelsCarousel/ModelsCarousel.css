@@ -69,3 +69,30 @@
   color: #000;
   margin: 0.25rem 0 0 0;
 }
+
+.models-carousel__add-btn {
+  position: absolute;
+  bottom: 60px;
+  left: 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.models-carousel__image-wrapper:hover .models-carousel__add-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.models-carousel__add-btn:hover {
+  background-color: #333;
+}

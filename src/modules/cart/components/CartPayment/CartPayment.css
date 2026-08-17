@@ -1,0 +1,87 @@
+.cart-payment {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cart-payment__methods {
+  padding-top: 24px;
+}
+
+.cart-payment__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 16px 0;
+}
+
+.cart-payment__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-payment__option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.cart-payment__option:hover {
+  border-color: #999;
+}
+
+.cart-payment__option--selected {
+  border-color: #000;
+  background-color: #fafafa;
+}
+
+.cart-payment__radio {
+  width: 16px;
+  height: 16px;
+  accent-color: #000;
+}
+
+.cart-payment__option-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cart-payment__option-label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.cart-payment__option-description {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.cart-payment__checkout-btn {
+  width: 100%;
+  padding: 16px 32px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+
+.cart-payment__checkout-btn:hover {
+  background-color: #333;
+}

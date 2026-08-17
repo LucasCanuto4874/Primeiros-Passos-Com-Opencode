@@ -37,8 +37,10 @@
 }
 
 .products-showcase__image-wrapper {
+  position: relative;
   overflow: hidden;
   background-color: #f5f5f5;
+  cursor: pointer;
 }
 
 .products-showcase__image {
@@ -62,4 +64,31 @@
 .products-showcase__price {
   font-size: 0.75rem;
   color: #666;
+}
+
+.products-showcase__add-btn {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.products-showcase__image-wrapper:hover .products-showcase__add-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.products-showcase__add-btn:hover {
+  background-color: #333;
 }

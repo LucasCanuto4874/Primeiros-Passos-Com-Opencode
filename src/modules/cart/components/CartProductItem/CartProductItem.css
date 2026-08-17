@@ -1,0 +1,77 @@
+.cart-product-item {
+  display: flex;
+  gap: 16px;
+  padding: 12px 0 0 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-product-item__image-wrapper {
+  width: 300px;
+  height: 300px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.cart-product-item__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-product-item__name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cart-product-item__price {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cart-product-item__quantity-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.cart-product-item__remove-btn {
+  background-color: #e0e0e0;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #000;
+  padding: 4px 10px;
+  transition: background-color 0.2s ease;
+}
+
+.cart-product-item__remove-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.cart-product-item .quantity-selector {
+  border: 1px solid #000;
+}
+
+.cart-product-item .quantity-selector__btn {
+  width: 24px;
+  height: 24px;
+  font-size: 0.75rem;
+}
+
+.cart-product-item .quantity-selector__value {
+  width: 32px;
+  font-size: 0.7rem;
+  padding: 3px 0;
+}

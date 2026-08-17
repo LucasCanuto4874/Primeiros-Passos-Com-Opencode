@@ -98,6 +98,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .header__actions {
@@ -115,4 +116,31 @@
 
 .header__icon-btn:hover {
   opacity: 0.7;
+}
+
+.header__icon-btn--cart {
+  position: relative;
+}
+
+.header__cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.header--scrolled .header__cart-badge {
+  background-color: #000;
+  color: #fff;
 }

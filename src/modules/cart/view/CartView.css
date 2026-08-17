@@ -1,0 +1,97 @@
+.cart-view {
+  min-height: 100vh;
+  background-color: #F3F4F6;
+}
+
+.cart-view__content {
+  display: flex;
+  padding: 128px 0 64px;
+  min-height: calc(100vh - 128px);
+  align-items: center;
+}
+
+.cart-view__products-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-view__payment-section {
+  position: fixed;
+  right: 0;
+  top: 128px;
+  width: 380px;
+  padding: 32px 48px 32px 32px;
+}
+
+.cart-view__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 0 32px 0;
+}
+
+.cart-view__success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: fadeIn 0.3s ease;
+}
+
+.cart-view__success-modal {
+  background-color: #fff;
+  padding: 48px;
+  max-width: 480px;
+  text-align: center;
+}
+
+.cart-view__success-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 16px 0;
+}
+
+.cart-view__success-message {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cart-view__content {
+    flex-direction: column-reverse;
+    padding: 100px 32px 32px;
+    gap: 32px;
+  }
+
+  .cart-view__payment-section {
+    width: 100%;
+    max-width: 100%;
+    position: static;
+  }
+
+  .cart-view__products-section {
+    max-width: 100%;
+  }
+}

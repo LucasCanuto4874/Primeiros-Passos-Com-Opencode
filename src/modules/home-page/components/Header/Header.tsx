@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FiSearch, FiUser, FiShoppingBag } from 'react-icons/fi';
+import { useCart } from '../../../../shared/context/CartContext';
 import './Header.css';
 
 interface NavItem {
   label: string;
   subItems?: string[];
 }
+
+type HeaderProps = {
+  forceScrolled?: boolean;
+};
 
 const navLinks: NavItem[] = [
   {
@@ -34,11 +40,16 @@ const navLinks: NavItem[] = [
   },
 ];
 
-function Header() {
+function Header({ forceScrolled = false }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const navigate = useNavigate();
+  const { getItemCount } = useCart();
+  const itemCount = getItemCount();
 
   useEffect(() => {
+    if (forceScrolled) return;
+
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       const heroHeight = window.innerHeight;
@@ -47,10 +58,10 @@ function Header() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [forceScrolled]);
 
   return (
-    <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
+    <header className={`header ${forceScrolled || isScrolled ? 'header--scrolled' : ''}`}>
       <nav className="header__nav">
         {navLinks.map((item) => (
           <div
@@ -83,7 +94,7 @@ function Header() {
         ))}
       </nav>
 
-      <div className="header__brand">Gentle Beast</div>
+      <div className="header__brand" onClick={() => navigate('/')} role="button" tabIndex={0}>Gentle Beast</div>
 
       <div className="header__actions">
         <button className="header__icon-btn" aria-label="Search">
@@ -92,8 +103,15 @@ function Header() {
         <button className="header__icon-btn" aria-label="My account">
           <FiUser size={20} />
         </button>
-        <button className="header__icon-btn" aria-label="Shopping bag">
+        <button
+          className="header__icon-btn header__icon-btn--cart"
+          aria-label="Shopping bag"
+          onClick={() => navigate('/cart')}
+        >
           <FiShoppingBag size={20} />
+          {itemCount > 0 && (
+            <span className="header__cart-badge">{itemCount}</span>
+          )}
         </button>
       </div>
     </header>

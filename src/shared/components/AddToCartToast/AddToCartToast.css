@@ -1,0 +1,37 @@
+.add-to-cart-toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background-color: #000;
+  color: #fff;
+  padding: 16px 32px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.add-to-cart-toast--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.add-to-cart-toast__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  flex-shrink: 0;
+}
