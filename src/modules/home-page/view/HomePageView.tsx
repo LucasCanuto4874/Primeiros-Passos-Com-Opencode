@@ -2,6 +2,7 @@ import Header from '../components/Header/Header';
 import HeroSection from '../components/HeroSection/HeroSection';
 import ModelsCarousel from '../components/ModelsCarousel/ModelsCarousel';
 import ProductsShowcase from '../components/ProductsShowcase/ProductsShowcase';
+import Footer from '../../../shared/components/Footer/Footer';
 import './HomePageView.css';
 
 function HomePageView() {
@@ -11,6 +12,7 @@ function HomePageView() {
       <HeroSection />
       <ModelsCarousel />
       <ProductsShowcase />
+      <Footer />
     </main>
   );
 }

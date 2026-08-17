@@ -4,6 +4,7 @@ import Header from '../../home-page/components/Header/Header';
 import { useCart } from '../../../shared/context/CartContext';
 import CartProductList from '../components/CartProductList/CartProductList';
 import CartPayment from '../components/CartPayment/CartPayment';
+import Footer from '../../../shared/components/Footer/Footer';
 import './CartView.css';
 
 function CartView() {
@@ -43,6 +44,7 @@ function CartView() {
           <CartPayment subtotal={getTotal()} onCheckout={handleCheckout} />
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Header from '../../home-page/components/Header/Header';
 import { useCart } from '../../../shared/context/CartContext';
 import AddToCartToast from '../../../shared/components/AddToCartToast/AddToCartToast';
+import Footer from '../../../shared/components/Footer/Footer';
 import ProductImageCarousel from '../components/ProductImageCarousel/ProductImageCarousel';
 import ProductInfo from '../components/ProductInfo/ProductInfo';
 import { getProductDetailById } from '../mocks/productDetailsData';
@@ -52,6 +53,7 @@ function ProductDetailsView() {
           <h2>Product not found</h2>
           <button onClick={() => navigate('/')}>Back to home page</button>
         </div>
+        <Footer />
       </main>
     );
   }
@@ -79,6 +81,7 @@ function ProductDetailsView() {
         isVisible={toastVisible}
         onClose={handleToastClose}
       />
+      <Footer />
     </main>
   );
 }
