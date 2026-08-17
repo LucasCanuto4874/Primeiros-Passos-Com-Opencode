@@ -1,7 +1,6 @@
 import { useCallback } from 'react';
 import type { CartProductItemProps } from '../../types/Cart.types';
 import QuantitySelector from '../../../product-details/components/QuantitySelector/QuantitySelector';
-import ZoomImage from '../../../../components/ZoomImage/ZoomImage';
 import './CartProductItem.css';
 
 function CartProductItem({
@@ -22,12 +21,11 @@ function CartProductItem({
   return (
     <div className="cart-product-item">
       <div className="cart-product-item__image-wrapper">
-        <ZoomImage
+        <img
           src={imageSrc}
           alt={name}
-          zoom={1.2}
-          zoomOnHover={1.4}
-          objectPosition="50% 30%"
+          className="cart-product-item__image"
+          style={{ objectPosition: '50% 30%' }}
         />
       </div>
 
