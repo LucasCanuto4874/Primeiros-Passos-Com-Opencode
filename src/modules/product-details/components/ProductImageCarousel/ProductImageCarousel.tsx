@@ -1,4 +1,4 @@
-import { useRef, useEffect, useCallback } from 'react';
+import { useRef, useEffect, useCallback, useState } from 'react';
 import gsap from 'gsap';
 import type { ProductImageCarouselProps } from '../../types/ProductDetails.types';
 import './ProductImageCarousel.css';
@@ -13,6 +13,7 @@ function ProductImageCarousel({ images, alt }: ProductImageCarouselProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const currentY = useRef(0);
+  const [showArrow, setShowArrow] = useState(true);
 
   const getMaxScroll = useCallback(() => {
     if (!containerRef.current || !trackRef.current) return 0;
@@ -31,6 +32,12 @@ function ProductImageCarousel({ images, alt }: ProductImageCarouselProps) {
       const newY = Math.max(-maxScroll, Math.min(0, currentY.current - delta));
 
       currentY.current = newY;
+
+      if (newY <= -maxScroll) {
+        setShowArrow(false);
+      } else {
+        setShowArrow(true);
+      }
 
       gsap.to(trackRef.current, {
         y: newY,
@@ -53,6 +60,7 @@ function ProductImageCarousel({ images, alt }: ProductImageCarouselProps) {
       if (currentY.current < -maxScroll) {
         currentY.current = -maxScroll;
         gsap.set(trackRef.current, { y: -maxScroll });
+        setShowArrow(false);
       }
     };
 
@@ -86,6 +94,25 @@ function ProductImageCarousel({ images, alt }: ProductImageCarouselProps) {
           ))}
         </div>
       </div>
+      {showArrow && (
+        <div className="product-image-carousel__arrow">
+          <svg
+            width="24"
+            height="10"
+            viewBox="0 0 24 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 2L12 8L22 2"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+      )}
     </div>
   );
 }

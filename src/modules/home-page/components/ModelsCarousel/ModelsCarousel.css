@@ -46,6 +46,7 @@
   height: 700px;
   object-fit: cover;
   pointer-events: none;
+  transform: scale(1.3);
 }
 
 .models-carousel__info {
