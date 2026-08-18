@@ -1,19 +1,8 @@
-import { useCallback } from 'react';
-import { useNavigate } from 'react-router-dom';
 import DraggableCarousel from '../../../../shared/components/DraggableCarousel';
 import { modelsData } from '../../mocks/modelsData';
 import './ModelsCarousel.css';
 
 function ModelsCarousel() {
-  const navigate = useNavigate();
-
-  const handleImageClick = useCallback(
-    (modelId: number) => {
-      navigate(`/product/model-${modelId}`);
-    },
-    [navigate]
-  );
-
   return (
     <section className="models-carousel">
       <div className="models-carousel__header">
@@ -26,10 +15,7 @@ function ModelsCarousel() {
       >
         {modelsData.map((model) => (
           <div key={model.id} className="models-carousel__card">
-            <div
-              className="models-carousel__image-wrapper"
-              onClick={() => handleImageClick(model.id)}
-            >
+            <div className="models-carousel__image-wrapper">
               <img
                 src={model.imageSrc}
                 alt={model.glassesName}

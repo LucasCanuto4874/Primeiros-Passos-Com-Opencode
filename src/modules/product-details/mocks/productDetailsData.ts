@@ -1,4 +1,3 @@
-import { modelsData } from '../../home-page/mocks/modelsData';
 import { productsData } from '../../home-page/mocks/productsData';
 import type { ProductDetail } from '../types/ProductDetails.types';
 
@@ -49,23 +48,6 @@ const productCodeToDetails: Record<number, string[]> = {
   6: [d11005159_FRONT, d11005159_VIDEO, d11005159_SIDE, d11005159_SIDE_DETAIL, d11005159_D_45, d11005159_D_45_DETAIL, d11005159_NORMAL_1],
 };
 
-const modelDetails: ProductDetail[] = modelsData.map((model) => ({
-  id: `model-${model.id}`,
-  name: model.glassesName,
-  price: model.price,
-  imageSrc: model.imageSrc,
-  description: `The ${model.glassesName} combines bold design with exceptional comfort. Crafted from premium materials, this frame is perfect for those seeking style and personality. The lens offers UV400 protection and the fit is smooth and secure.`,
-  specs: [
-    { label: 'Material', value: 'Premium acetate' },
-    { label: 'Lens', value: 'Polarized with UV400 protection' },
-    { label: 'Weight', value: '32g' },
-    { label: 'Lens width', value: '58mm' },
-    { label: 'Bridge', value: '18mm' },
-    { label: 'Temple', value: '140mm' },
-  ],
-  images: [model.imageSrc, model.imageSrc, model.imageSrc],
-}));
-
 const productDetails: ProductDetail[] = productsData.map((product) => ({
   id: `product-${product.id}`,
   name: product.productName,
@@ -83,7 +65,7 @@ const productDetails: ProductDetail[] = productsData.map((product) => ({
   images: productCodeToDetails[product.id] || [product.imageSrc, product.imageSrc, product.imageSrc],
 }));
 
-export const allProductDetails: ProductDetail[] = [...modelDetails, ...productDetails];
+export const allProductDetails: ProductDetail[] = [...productDetails];
 
 export function getProductDetailById(id: string): ProductDetail | undefined {
   return allProductDetails.find((p) => p.id === id);
