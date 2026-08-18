@@ -1,14 +1,30 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'react';
 import type { ProductInfoProps, ProductSpec } from '../../types/ProductDetails.types';
-import QuantitySelector from '../QuantitySelector/QuantitySelector';
 import './ProductInfo.css';
 
 function ProductInfo({ name, price, description, specs, onAddToCart }: ProductInfoProps) {
   const [quantity, setQuantity] = useState(1);
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const handleAddToCart = useCallback(() => {
     onAddToCart(quantity);
   }, [onAddToCart, quantity]);
+
+  const handleSelect = useCallback((num: number) => {
+    setQuantity(num);
+    setIsOpen(false);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <div className="product-info">
@@ -36,7 +52,43 @@ function ProductInfo({ name, price, description, specs, onAddToCart }: ProductIn
       <div className="product-info__actions">
         <div className="product-info__quantity">
           <span className="product-info__quantity-label">Quantity</span>
-          <QuantitySelector value={quantity} onChange={setQuantity} />
+          <div className="product-info__dropdown" ref={dropdownRef}>
+            <button
+              className="product-info__dropdown-trigger"
+              onClick={() => setIsOpen(!isOpen)}
+              type="button"
+            >
+              <span>{quantity}</span>
+              <svg
+                className={`product-info__dropdown-arrow ${isOpen ? 'product-info__dropdown-arrow--open' : ''}`}
+                width="14"
+                height="8"
+                viewBox="0 0 14 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L7 7L13 1"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+            <div className={`product-info__dropdown-list ${isOpen ? 'product-info__dropdown-list--open' : ''}`}>
+              {Array.from({ length: 5 }, (_, i) => i + 1).map((num) => (
+                <button
+                  key={num}
+                  className={`product-info__dropdown-item ${num === quantity ? 'product-info__dropdown-item--active' : ''}`}
+                  onClick={() => handleSelect(num)}
+                  type="button"
+                >
+                  {num}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
 
         <button
