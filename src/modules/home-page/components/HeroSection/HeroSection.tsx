@@ -118,7 +118,6 @@ function HeroSection() {
               <div className="hero-section__overlay">
                 <div className="hero-section__content">
                   <h2 className="hero-section__collection">{slide.collectionName}</h2>
-                  <p className="hero-section__description">{slide.description}</p>
                   <div className="hero-section__buttons">
                     <button className="hero-section__btn hero-section__btn--primary">
                       Shop Now
