@@ -24,7 +24,7 @@
   display: block;
   object-fit: cover;
   pointer-events: none;
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 .product-image-carousel__video {
@@ -33,6 +33,7 @@
   display: block;
   object-fit: cover;
   pointer-events: none;
+  transform: scale(1.5);
 }
 
 .product-image-carousel__arrow {

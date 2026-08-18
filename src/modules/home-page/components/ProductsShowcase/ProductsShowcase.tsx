@@ -45,7 +45,8 @@ function ProductsShowcase() {
   return (
     <section className="products-showcase">
       <div className="products-showcase__header">
-        <h2 className="products-showcase__title">SHOP</h2>
+        <h2 className="products-showcase__title">PRODUCTS</h2>
+        <p className="products-showcase__subtitle">Designed objects for the modern gaze</p>
       </div>
 
       <DraggableCarousel

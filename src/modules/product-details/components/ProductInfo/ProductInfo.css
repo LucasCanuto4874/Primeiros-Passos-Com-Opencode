@@ -1,8 +1,9 @@
 .product-info {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   padding: 0;
+  width: 100%;
 }
 
 .product-info__name {
@@ -22,30 +23,52 @@
   margin: 0;
 }
 
-.product-info__description {
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: #555;
+.product-info__accordion {
+  border-top: none;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.product-info__description p {
-  margin: 0;
+.product-info__accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.product-info__specs {
-  border-top: 1px solid #e0e0e0;
-  padding-top: 12px;
-}
-
-.product-info__specs-title {
+.product-info__accordion-title {
   font-family: 'Manrope', sans-serif;
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin: 0 0 10px 0;
   color: #000;
+}
+
+.product-info__accordion-icon {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #000;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  line-height: 1;
+}
+
+.product-info__accordion-icon--open {
+  transform: rotate(45deg);
+}
+
+.product-info__accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-info__accordion-content--open {
+  max-height: 300px;
 }
 
 .product-info__specs-list {
@@ -53,6 +76,7 @@
   flex-direction: column;
   gap: 0;
   margin: 0;
+  padding-bottom: 12px;
 }
 
 .product-info__spec-item {
@@ -76,6 +100,22 @@
   margin: 0;
 }
 
+.product-info__size-fit-list {
+  list-style: none;
+  padding: 0 0 12px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-info__size-fit-item {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  color: #666;
+  padding: 3px 0;
+}
+
 .product-info__actions {
   display: flex;
   flex-direction: column;
@@ -84,101 +124,27 @@
 }
 
 .product-info__quantity {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  width: 80px;
 }
 
-.product-info__quantity-label {
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #000;
-}
-
-.product-info__dropdown {
-  position: relative;
+.product-info__quantity-select {
   width: 100%;
-}
-
-.product-info__dropdown-trigger {
-  width: 100%;
-  padding: 12px 14px;
+  padding: 8px 10px;
   font-family: 'Manrope', sans-serif;
-  font-size: 0.8rem;
-  border: 1px solid #000;
+  font-size: 0.75rem;
+  border: 1px solid #e0e0e0;
   background-color: #fff;
   color: #000;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: background-color 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23000' stroke-width='1' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
 }
 
-.product-info__dropdown-trigger:hover {
-  background-color: #f5f5f5;
-}
-
-.product-info__dropdown-arrow {
-  width: 14px;
-  height: 8px;
-  color: #000;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.product-info__dropdown-arrow--open {
-  transform: rotate(180deg);
-}
-
-.product-info__dropdown-list {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-top: none;
-  z-index: 10;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0;
-}
-
-.product-info__dropdown-list--open {
-  max-height: 250px;
-  opacity: 1;
-}
-
-.product-info__dropdown-item {
-  width: 100%;
-  padding: 10px 14px;
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.8rem;
-  border: none;
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 0.2s ease;
-}
-
-.product-info__dropdown-item:hover {
-  background-color: #000;
-  color: #fff;
-}
-
-.product-info__dropdown-item--active {
-  background-color: #000;
-  color: #fff;
-}
-
-.product-info__dropdown-item--active:hover {
-  background-color: #000;
-  color: #fff;
+.product-info__quantity-select:focus {
+  outline: none;
+  border-color: #000;
 }
 
 .product-info__add-btn {

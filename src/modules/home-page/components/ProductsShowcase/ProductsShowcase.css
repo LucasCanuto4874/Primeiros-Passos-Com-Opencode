@@ -5,13 +5,24 @@
 
 .products-showcase__header {
   padding: 0 4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .products-showcase__title {
   font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.products-showcase__subtitle {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #666;
+  margin: 0.5rem 0 0 0;
+  text-transform: uppercase;
 }
 
 .products-showcase__container {
@@ -45,7 +56,7 @@
 
 .products-showcase__image {
   width: 100%;
-  height: 550px;
+  height: 400px;
   object-fit: cover;
   pointer-events: none;
   transform: scale(1.7);

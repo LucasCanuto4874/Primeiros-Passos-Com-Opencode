@@ -15,12 +15,12 @@ import product12 from '../img/img-products-carrousel/11005144_FRONT.avif';
 import product13 from '../img/img-products-carrousel/11005157_FRONT.avif';
 
 export const productsData: ProductCard[] = [
+  { id: 6, imageSrc: product6, productName: 'Vision Rose Gold Elite', price: 489.0 },
   { id: 1, imageSrc: product1, productName: 'Urban Classic', price: 449.0 },
   { id: 2, imageSrc: product2, productName: 'Beast Aviator Classic', price: 459.0 },
   { id: 3, imageSrc: product3, productName: 'Gentle Wayfarer Noir', price: 389.0 },
   { id: 4, imageSrc: product4, productName: 'Wild Crystal Clear', price: 429.0 },
   { id: 5, imageSrc: product5, productName: 'Shadow Gradient Pro', price: 399.0 },
-  { id: 6, imageSrc: product6, productName: 'Vision Rose Gold Elite', price: 489.0 },
   { id: 7, imageSrc: product7, productName: 'Beast Aviator Gold', price: 459.0 },
   { id: 8, imageSrc: product8, productName: 'Gentle Matte Black', price: 389.0 },
   { id: 9, imageSrc: product9, productName: 'Wild Crystal', price: 429.0 },

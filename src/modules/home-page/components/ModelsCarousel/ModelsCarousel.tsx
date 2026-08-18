@@ -6,7 +6,8 @@ function ModelsCarousel() {
   return (
     <section className="models-carousel">
       <div className="models-carousel__header">
-        <h2 className="models-carousel__title">LOOKBOOK</h2>
+        <h2 className="models-carousel__title">CONCEPT</h2>
+        <p className="models-carousel__subtitle">Visual narratives exploring form and identity</p>
       </div>
 
       <DraggableCarousel
