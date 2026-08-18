@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 import type { CartProductItemProps } from '../../types/Cart.types';
-import QuantitySelector from '../../../product-details/components/QuantitySelector/QuantitySelector';
+import CartQuantityDropdown from '../CartQuantityDropdown/CartQuantityDropdown';
 import './CartProductItem.css';
 
 function CartProductItem({
@@ -35,12 +35,12 @@ function CartProductItem({
           R$ {(price * quantity).toFixed(2).replace('.', ',')}
         </p>
 
-        <div className="cart-product-item__quantity-row">
-          <QuantitySelector
+        <div className="cart-product-item__actions">
+          <CartQuantityDropdown
             value={quantity}
             onChange={handleQuantityChange}
             min={1}
-            max={10}
+            max={5}
           />
           <button
             className="cart-product-item__remove-btn"

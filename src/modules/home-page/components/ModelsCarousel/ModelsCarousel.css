@@ -71,13 +71,13 @@
 
 .models-carousel__glasses-name {
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #000;
   margin: 0;
 }
 
 .models-carousel__price {
   font-size: 0.75rem;
-  color: #000;
+  color: #666;
   margin: 0.25rem 0 0 0;
 }

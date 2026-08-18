@@ -123,30 +123,6 @@
   padding-top: 8px;
 }
 
-.product-info__quantity {
-  width: 80px;
-}
-
-.product-info__quantity-select {
-  width: 100%;
-  padding: 8px 10px;
-  font-family: 'Manrope', sans-serif;
-  font-size: 0.75rem;
-  border: 1px solid #e0e0e0;
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23000' stroke-width='1' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 8px center;
-}
-
-.product-info__quantity-select:focus {
-  outline: none;
-  border-color: #000;
-}
-
 .product-info__add-btn {
   width: 100%;
   padding: 14px 24px;

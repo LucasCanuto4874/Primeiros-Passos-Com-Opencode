@@ -13,7 +13,7 @@ function ProductsShowcase() {
   const [toastMessage, setToastMessage] = useState('');
 
   const handleAddToCart = useCallback(
-    (product: (typeof productsData)[0], e: React.MouseEvent) => {
+    (product: (typeof productsData)[0], e: React.MouseEvent | React.KeyboardEvent) => {
       e.stopPropagation();
       addItem(
         {
@@ -64,15 +64,21 @@ function ProductsShowcase() {
                 alt={product.productName}
                 className="products-showcase__image"
               />
-              <button
-                className="products-showcase__add-btn"
-                onClick={(e) => handleAddToCart(product, e)}
-                aria-label={`Add ${product.productName} to cart`}
-              >
-                Add to cart
-              </button>
             </div>
             <div className="products-showcase__info">
+              <span
+                className="products-showcase__add-link"
+                onClick={(e) => handleAddToCart(product, e)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    handleAddToCart(product, e);
+                  }
+                }}
+              >
+                Add to cart
+              </span>
               <h3 className="products-showcase__product-name">{product.productName}</h3>
               <p className="products-showcase__price">
                 R$ {product.price.toFixed(2).replace('.', ',')}

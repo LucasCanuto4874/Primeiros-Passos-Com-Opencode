@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import type { ProductInfoProps, ProductSpec } from '../../types/ProductDetails.types';
+import CartQuantityDropdown from '../../../cart/components/CartQuantityDropdown/CartQuantityDropdown';
 import './ProductInfo.css';
 
 function ProductInfo({ name, price, specs, onAddToCart }: ProductInfoProps) {
@@ -59,19 +60,12 @@ function ProductInfo({ name, price, specs, onAddToCart }: ProductInfoProps) {
       </div>
 
       <div className="product-info__actions">
-        <div className="product-info__quantity">
-          <select
-            className="product-info__quantity-select"
-            value={quantity}
-            onChange={(e) => setQuantity(Number(e.target.value))}
-          >
-            {Array.from({ length: 5 }, (_, i) => i + 1).map((num) => (
-              <option key={num} value={num}>
-                {num}
-              </option>
-            ))}
-          </select>
-        </div>
+        <CartQuantityDropdown
+          value={quantity}
+          onChange={setQuantity}
+          min={1}
+          max={5}
+        />
 
         <button
           className="product-info__add-btn"
