@@ -5,12 +5,7 @@ import './FaqView.css';
 function FaqView() {
   return (
     <main className="faq-view">
-      <Header />
-      
-      <section className="faq-hero">
-        <h1 className="faq-hero__title">Frequently Asked Questions</h1>
-        <p className="faq-hero__subtitle">Find answers to common questions about our products and services</p>
-      </section>
+      <Header forceScrolled />
 
       <section className="faq-content">
         <div className="faq-container">
