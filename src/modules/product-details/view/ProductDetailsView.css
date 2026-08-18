@@ -47,7 +47,7 @@
   background-color: #000;
   color: #fff;
   border: none;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -85,3 +85,4 @@
     display: none;
   }
 }
+

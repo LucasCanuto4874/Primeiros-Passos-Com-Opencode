@@ -16,7 +16,7 @@
 }
 
 .product-info__price {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
   font-weight: 300;
   color: #333;
@@ -40,7 +40,7 @@
 }
 
 .product-info__accordion-title {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -49,7 +49,7 @@
 }
 
 .product-info__accordion-icon {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   font-weight: 300;
   color: #000;
@@ -87,14 +87,14 @@
 }
 
 .product-info__spec-label {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   color: #666;
   margin: 0;
 }
 
 .product-info__spec-value {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   color: #000;
   margin: 0;
@@ -110,7 +110,7 @@
 }
 
 .product-info__size-fit-item {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   color: #666;
   padding: 3px 0;
@@ -129,7 +129,7 @@
   background-color: #000;
   color: #fff;
   border: none;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -141,3 +141,4 @@
 .product-info__add-btn:hover {
   background-color: #333;
 }
+

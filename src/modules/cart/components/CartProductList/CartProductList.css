@@ -13,7 +13,7 @@
 }
 
 .cart-product-list__empty-message {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1rem;
   color: #666;
   margin: 0;
@@ -24,7 +24,7 @@
   background-color: #000;
   color: #fff;
   border: none;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -35,3 +35,4 @@
 .cart-product-list__continue-btn:hover {
   background-color: #333;
 }
+

@@ -9,7 +9,7 @@
 }
 
 .cart-payment__title {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -55,13 +55,13 @@
 }
 
 .cart-payment__option-label {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
 }
 
 .cart-payment__option-description {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   color: #666;
 }
@@ -72,7 +72,7 @@
   background-color: #000;
   color: #fff;
   border: none;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -85,3 +85,4 @@
 .cart-payment__checkout-btn:hover {
   background-color: #333;
 }
+

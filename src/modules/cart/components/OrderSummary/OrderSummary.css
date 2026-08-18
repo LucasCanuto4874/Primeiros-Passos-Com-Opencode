@@ -4,7 +4,7 @@
 }
 
 .order-summary__title {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -30,13 +30,13 @@
 }
 
 .order-summary__label {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   color: #666;
 }
 
 .order-summary__value {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   color: #000;
 }
@@ -50,3 +50,4 @@
   font-size: 1.125rem;
   font-weight: 600;
 }
+

@@ -62,7 +62,7 @@
 }
 
 .cart-view__success-message {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   color: #666;
   line-height: 1.6;
@@ -95,3 +95,4 @@
     max-width: 100%;
   }
 }
+

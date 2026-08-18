@@ -46,7 +46,7 @@
 }
 
 .product-image-carousel__arrow-icon {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 0.1em;
@@ -60,3 +60,4 @@
     transform: translateX(-50%) translateY(12px);
   }
 }
+

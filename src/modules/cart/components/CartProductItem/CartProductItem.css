@@ -31,14 +31,14 @@
 }
 
 .cart-product-item__name {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   margin: 0;
 }
 
 .cart-product-item__price {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   margin: 0;
@@ -63,7 +63,7 @@
 .cart-product-item__remove-btn {
   background-color: transparent;
   border: 1px solid #e0e0e0;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.6rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -85,3 +85,4 @@
   transform: translateY(0);
   box-shadow: none;
 }
+

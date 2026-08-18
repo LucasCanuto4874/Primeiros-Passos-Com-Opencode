@@ -10,7 +10,7 @@
   height: 40px;
   border: none;
   background: none;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 1.125rem;
   cursor: pointer;
   display: flex;
@@ -31,9 +31,10 @@
 .quantity-selector__value {
   width: 48px;
   text-align: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
   padding: 8px 0;
 }
+

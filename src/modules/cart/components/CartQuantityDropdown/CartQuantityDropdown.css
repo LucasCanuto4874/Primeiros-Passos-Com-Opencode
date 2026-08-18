@@ -6,7 +6,7 @@
 .cart-quantity-dropdown__trigger {
   width: 100%;
   padding: 8px 10px;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   border: 1px solid #e0e0e0;
   background-color: #fff;
@@ -64,7 +64,7 @@
   background: none;
   border: none;
   text-align: left;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   color: #000;
   cursor: pointer;
@@ -84,3 +84,4 @@
 .cart-quantity-dropdown__option--selected:hover {
   background-color: #333;
 }
+

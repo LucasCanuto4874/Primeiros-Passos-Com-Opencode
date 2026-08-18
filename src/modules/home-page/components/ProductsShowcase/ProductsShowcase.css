@@ -9,14 +9,14 @@
 }
 
 .products-showcase__title {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 0.05em;
   margin: 0;
 }
 
 .products-showcase__subtitle {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 0.7rem;
   font-weight: 400;
   letter-spacing: 0.08em;
@@ -68,30 +68,13 @@
 }
 
 .products-showcase__product-name {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 400;
   margin-bottom: 0.25rem;
 }
 
 .products-showcase__price {
-  font-size: 0.75rem;
-  color: #666;
-}
-
-.products-showcase__add-link {
-  display: inline-block;
-  font-family: 'Manrope', sans-serif;
   font-size: 0.65rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #000;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  margin-bottom: 4px;
-  transition: color 0.2s ease;
-}
-
-.products-showcase__add-link:hover {
   color: #666;
 }
+
